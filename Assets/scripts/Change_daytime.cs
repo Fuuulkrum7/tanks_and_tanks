@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Change_daytime : MonoBehaviour
 {
     Light light;
-    public Light players_light;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +15,7 @@ public class Change_daytime : MonoBehaviour
     {
         if (light.intensity > 0.2f)
         {
-            light.intensity -= 0.00005f;
-            players_light.intensity += 0.0005f;
+            light.intensity -= 0.00001f;
         }
     }
 }

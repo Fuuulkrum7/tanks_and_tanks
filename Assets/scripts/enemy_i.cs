@@ -25,6 +25,8 @@ public class enemy_i : MonoBehaviour
 
     public bool stop = false;
 
+    public int far = 100;
+
     void Start()
     {
         rb = head.GetComponent<Rigidbody>();
@@ -50,7 +52,7 @@ public class enemy_i : MonoBehaviour
             var fwd = dylo.transform.TransformDirection(Vector3.forward);
             Debug.DrawRay(dylo.transform.position, fwd);
 
-            if (Physics.Raycast(dylo.transform.position, fwd, out RaycastHit hit2))
+            if (Physics.Raycast(dylo.transform.position, fwd, out RaycastHit hit2, 70))
             {
                 if (!script.shooted && hit2.collider.gameObject.tag == "Player")
                     script.Fire(clip);

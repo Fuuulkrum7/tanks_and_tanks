@@ -13,7 +13,7 @@ public class Players_die : MonoBehaviour
 
     public GameObject cam;
 
-    int hp = 1000;
+    int hp = 10;
 
     public GameObject other;
 
@@ -53,8 +53,8 @@ public class Players_die : MonoBehaviour
     {
         hp += i;
 
-        if (hp > 1000)
-            hp = 1000;
+        if (hp > 10)
+            hp = 10;
 
         heart.fillAmount = 0.1f * hp;
         hp_visual.text = $"{hp}";
