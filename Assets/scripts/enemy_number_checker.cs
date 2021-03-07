@@ -12,6 +12,7 @@ public class enemy_number_checker : MonoBehaviour
     next_scene script;
     Camera_changer script2;
     main script3;
+    move wheels;
 
     public GameObject cam;
 
@@ -21,6 +22,7 @@ public class enemy_number_checker : MonoBehaviour
         script2 = cam.GetComponent<Camera_changer>();
         script3 = FindObjectOfType<main>();
         enemies = FindObjectsOfType<enemy_i>().Length;
+        wheels = FindObjectOfType<move>();
     }
 
     public void recount()
@@ -35,6 +37,14 @@ public class enemy_number_checker : MonoBehaviour
     public IEnumerator end_game()
     {
         yield return new WaitForSeconds(5f);
+
+        foreach (AxleInfo axleInfo in wheels.axleInfos)
+        {
+            axleInfo.leftWheel.motorTorque = 0;
+            axleInfo.rightWheel.motorTorque = 0;
+            axleInfo.leftWheel.brakeTorque = 5;
+            axleInfo.rightWheel.brakeTorque = 5;
+        }
         panel.SetActive(false);
         winner.SetActive(true);
         script3.stop_move();

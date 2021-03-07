@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1622632878447286853}
   - component: {fileID: 1622632878447286850}
   - component: {fileID: 1622632878447286852}
-  - component: {fileID: 1622632878447286855}
   - component: {fileID: 1622632878447286854}
   - component: {fileID: 1622632878447286873}
   - component: {fileID: 1622632878447286851}
+  - component: {fileID: 4086564429355652980}
   m_Layer: 0
   m_Name: head2
   m_TagString: enemy
@@ -101,19 +101,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1622632878447286855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622632878447286849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75addd7fe285ec745ac9450acf2625b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 1622632879842372591}
 --- !u!114 &1622632878447286854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +226,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9000005, y: 0.94204473, z: 3.1000006}
   m_Center: {x: 0.05, y: 0.6710224, z: -0.049999963}
+--- !u!114 &4086564429355652980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622632878447286849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffef4ce2455687f4cb1f94b384407462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m24: {fileID: 1622632879842372591}
 --- !u!1 &1622632878464858474
 GameObject:
   m_ObjectHideFlags: 0
@@ -5034,7 +5034,7 @@ GameObject:
   - component: {fileID: 1622632878910649928}
   - component: {fileID: 1622632878910649929}
   - component: {fileID: 1622632878910650294}
-  - component: {fileID: 1622632878910649931}
+  - component: {fileID: 1900726283731622514}
   - component: {fileID: 1622632878910650295}
   m_Layer: 0
   m_Name: dylo2
@@ -5106,7 +5106,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1622632878910649931
+--- !u!114 &1900726283731622514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5115,10 +5115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1622632878910650292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75addd7fe285ec745ac9450acf2625b5, type: 3}
+  m_Script: {fileID: 11500000, guid: ffef4ce2455687f4cb1f94b384407462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 1622632878910650292}
+  m24: {fileID: 1622632879842372591}
 --- !u!65 &1622632878910650295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14861,6 +14861,7 @@ MonoBehaviour:
   smoke: {fileID: 1622632880388013012}
   ray_distance: 0
   stop: 0
+  far: 100
 --- !u!65 &1622632879842372581
 BoxCollider:
   m_ObjectHideFlags: 0

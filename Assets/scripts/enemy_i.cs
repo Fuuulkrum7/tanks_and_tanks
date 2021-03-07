@@ -60,15 +60,7 @@ public class enemy_i : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Bullet")
-        {
-            on_shot(other);
-        }
-    }
-
-    public void on_shot(Collision other)
+    public void on_shot()
     {
         enemy_hp--;
 

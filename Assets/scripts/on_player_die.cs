@@ -1,29 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class on_player_die : MonoBehaviour
+public class On_player_die : MonoBehaviour
 {
     Players_die script;
+    public GameObject head;
 
     // Start is called before the first frame update
     void Start()
     {
-        script = FindObjectOfType<Players_die>();
+        script = head.GetComponent<Players_die>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void on_shot()
     {
-        if (collision.gameObject.tag == "Bullet")
-            script.on_hit();
+        script.on_hit();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void heal(int i)
     {
-        if (other.gameObject.tag == "healing")
-        {
-            Destroy(other.gameObject);
-            script.healing(1);
-        }
+        script.healing(i);
     }
 }
