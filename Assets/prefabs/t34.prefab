@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6868521595805112797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head_point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8438437815509627809}
   - component: {fileID: 8438437815509627811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8438437815547096049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bullet spawn point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 8438437815553953289}
   - component: {fileID: 8438437815553953288}
   - component: {fileID: 8438437815553953295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smoke 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4899,7 +4899,7 @@ GameObject:
   - component: {fileID: 8438437815698552645}
   - component: {fileID: 8438437815698552644}
   - component: {fileID: 8438437815698552635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: smoke 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9651,7 +9651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8438437815748979860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9684,7 +9684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8438437815968582591}
   - component: {fileID: 8438437815968582584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: static_tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9810,7 +9810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8438437815995714995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: check
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -9842,7 +9842,7 @@ GameObject:
   - component: {fileID: 8438437816301415906}
   - component: {fileID: 8438437816301415916}
   - component: {fileID: 8438437816301415907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14599,7 +14599,7 @@ GameObject:
   - component: {fileID: 8438437816485233910}
   - component: {fileID: 8438437816485233905}
   - component: {fileID: 8438437816485233906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -14711,7 +14711,7 @@ GameObject:
   - component: {fileID: 8438437816547021043}
   - component: {fileID: 8438437816547021042}
   - component: {fileID: 8438437816547021041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dylo
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -14802,7 +14802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8438437816772539597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14836,7 +14836,8 @@ GameObject:
   - component: {fileID: 8438437816920104393}
   - component: {fileID: 8438437816920104392}
   - component: {fileID: 8438437816920104395}
-  m_Layer: 0
+  - component: {fileID: 8568292492728848770}
+  m_Layer: 8
   m_Name: head
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -14942,6 +14943,19 @@ MonoBehaviour:
   other: {fileID: 8438437816962757373}
   sparks: {fileID: 8438437816301415905}
   Load: {fileID: 0}
+--- !u!114 &8568292492728848770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438437816920104398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04bef53144837c4994686f08be1c323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 8438437816920104398}
 --- !u!1 &8438437816949846439
 GameObject:
   m_ObjectHideFlags: 0
@@ -14953,7 +14967,7 @@ GameObject:
   - component: {fileID: 8438437816949846432}
   - component: {fileID: 8438437816949846434}
   - component: {fileID: 8438437816949846433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19705,7 +19719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8438437816962757374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: for_other
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19742,7 +19756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8438437816971052573}
   - component: {fileID: 8438437816971052574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: move_sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19870,7 +19884,7 @@ GameObject:
   - component: {fileID: 8438437816982603623}
   - component: {fileID: 8438437816982603617}
   - component: {fileID: 8438437816982603616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24624,7 +24638,7 @@ GameObject:
   - component: {fileID: 8438437817080505235}
   - component: {fileID: 8438437817080505234}
   - component: {fileID: 8438437817080505233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: move (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29378,7 +29392,7 @@ GameObject:
   - component: {fileID: 8438437817161685701}
   - component: {fileID: 8438437817161685700}
   - component: {fileID: 8438437817161685691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34135,8 +34149,7 @@ GameObject:
   - component: {fileID: 8438437817315554699}
   - component: {fileID: 8438437817315554704}
   - component: {fileID: 5893865059648286372}
-  - component: {fileID: 8142850664577224166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: t34
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -34233,6 +34246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04bef53144837c4994686f08be1c323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  head: {fileID: 8438437816920104398}
 --- !u!136 &5893865059648286372
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -34247,22 +34261,6 @@ CapsuleCollider:
   m_Height: 4.122978
   m_Direction: 2
   m_Center: {x: -2.3709412, y: 0.7675147, z: -0.074832916}
---- !u!54 &8142850664577224166
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8438437817315554698}
-  serializedVersion: 2
-  m_Mass: 2000
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8438437817523995706
 GameObject:
   m_ObjectHideFlags: 0
@@ -34272,7 +34270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8438437817523995707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dylo_rotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

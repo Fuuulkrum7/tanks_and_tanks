@@ -3,11 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class AxleInfo
+{
+    public WheelCollider leftWheel;
+    public WheelCollider rightWheel;
+    public bool motor;
+    public bool steering;
+}
+
 public class move : MonoBehaviour
 {
     public Joystick joystick;
     public GameObject t34;
-    float speed = -0.20f;
     public GameObject move_GO1;
     public GameObject move_GO2;
 
@@ -23,6 +31,31 @@ public class move : MonoBehaviour
     float[] need_to_rotate = new float[2];
 
     bool check = false;
+
+    public List<AxleInfo> axleInfos;
+    public float maxMotorTorque;
+    public float maxSteeringAngle;
+
+
+    private void move_tank()
+    {
+        float motor = maxMotorTorque * joystick.Vertical;
+        float steering = maxSteeringAngle * joystick.Horizontal;
+
+        foreach (AxleInfo axleInfo in axleInfos)
+        {
+            if (axleInfo.steering)
+            {
+                axleInfo.leftWheel.steerAngle = steering;
+                axleInfo.rightWheel.steerAngle = steering;
+            }
+            if (axleInfo.motor)
+            {
+                axleInfo.leftWheel.motorTorque = motor;
+                axleInfo.rightWheel.motorTorque = motor;
+            }
+        }
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -113,22 +146,7 @@ public class move : MonoBehaviour
         }
 
 
-        if (joystick.Vertical > 0)
-        {
-            t34.transform.Translate(new Vector3(joystick.Vertical * speed, 0, 0));
-        }
-        //
-
-        else
-        {
-            t34.transform.Translate(new Vector3(joystick.Vertical * speed / 2, 0, 0));
-        }
-        //
-
-        if (joystick.Horizontal != 0)
-        {
-            t34.transform.Rotate(0, joystick.Horizontal * speed * -2.5f, 0);
-        }
+        move_tank();
     }
 
 

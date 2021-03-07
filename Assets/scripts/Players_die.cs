@@ -22,6 +22,7 @@ public class Players_die : MonoBehaviour
     next_scene script;
     Camera_changer script2;
     main script3;
+    move wheels;
 
     public GameObject Load;
 
@@ -30,23 +31,7 @@ public class Players_die : MonoBehaviour
         script = Load.GetComponent<next_scene>();
         script2 = cam.GetComponent<Camera_changer>();
         script3 = FindObjectOfType<main>();
-    }
-
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "Bullet")
-        {
-            on_hit();
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "healing")
-        {
-            Destroy(other.gameObject);
-            healing(1);
-        }
+        wheels = FindObjectOfType<move>();
     }
 
     public void healing(int i)
@@ -62,11 +47,17 @@ public class Players_die : MonoBehaviour
 
     public void on_hit()
     {
-
         healing(-1);
 
         if (hp == 0)
         {
+            foreach (AxleInfo axleInfo in wheels.axleInfos)
+            {
+                axleInfo.leftWheel.motorTorque = 0;
+                axleInfo.rightWheel.motorTorque = 0;
+                axleInfo.leftWheel.brakeTorque = 5;
+                axleInfo.rightWheel.brakeTorque = 5;
+            }
             control.SetActive(false);
             other.SetActive(false);
             sparks.SetActive(true);

@@ -52,17 +52,30 @@ public class bullet_script : MonoBehaviour
                 done = true;
             }
 
-            // иначе если пуля рикошетила
-            else if (done)
-            {
-                Destroy(gameObject);
-            }
-
             // во всех противных случаях рикошет
         }
 
+        else if (other.gameObject.tag == "Player")
+        {
+            On_player_die player = other.gameObject.GetComponent<On_player_die>();
+            player.on_shot();
+        }
+
+        else if (other.gameObject.tag == "enemy")
+        {
+            enemy_i enemy = other.gameObject.GetComponent<enemy_i>();
+            if (enemy != null)
+            {
+                enemy.on_shot();
+            }
+            else
+            {
+                Redirect_hit enemy_part = other.gameObject.GetComponent<Redirect_hit>();
+                enemy_part.on_hit();
+            }
+        }
         // иначе просто уничтожаем пулю
-        else
+        if (other.gameObject.tag != "Wall" || done)
             Destroy(gameObject);
     }
 }
